@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Bootstrap Example</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet"
+	href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+<link href="css/test.css" rel="stylesheet" type="text/css"
+	media="screen">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"
+	type="text/javascript"></script>
+<script
+	src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"
+	type="text/javascript"></script>
+</head>
+<body>
+	<div class="container-fluid">
+	
+	<h2>Coffee Orders</h2>
+	<ul id="orders">
+		<li>Name: John, Drink: Coffee</li>
+		<li>Name: Jane, Drink: Tea</li>
+
+	</ul>
+		<h1>Hello World!</h1>
+		<p>Resize the browser window to see the effect.</p>
+		<div class="row">
+			<div class="col-sm-4" style="background-color: lavender;">.col-sm-4</div>
+			<div class="col-sm-4" style="background-color: lavenderblush;">.col-sm-4</div>
+			<div class="col-sm-4" style="background-color: lavender;">.col-sm-4</div>
+		</div>
+
+		<br>
+		<div class="container">
+			<div class="jumbotron">
+				<h1>Let's have fun</h1>
+				<button class="panel-button" data-panelid="panel1">#btn1</button>
+				<button class="panel-button" data-panelid="panel2">#btn2</button>
+				<button class="panel-button" data-panelid="panel3">#btn3</button>
+				<button class="panel-button" data-panelid="panel4">#btn4</button>
+				<button class="panel-button" data-panelid="panel5">#btn5</button>
+			</div>
+
+		</div>
+
+
+		<div class="row">
+			<div class="col-xs-3">
+				<div id="panel1" style="display:none" class="panel panel-primary">
+					<div class="panel-heading">#panel1</div>
+					<div class="panel-body">content</div>
+				</div>
+
+			</div>
+			<div class="col-xs-3">
+				<div id="panel2" style="display:none" class="panel panel-primary">
+					<div class="panel-heading">#panel2</div>
+					<div class="panel-body">content</div>
+				</div>
+
+			</div>
+			<div class="col-xs-3">
+				<div id="panel3" style="display:none" class="panel panel-primary">
+					<div class="panel-heading">#panel3</div>
+					<div class="panel-body">content</div>
+				</div>
+
+			</div>
+			<div class="col-xs-3">
+				<div id="panel4" style="display:none" class="panel panel-primary">
+					<div class="panel-heading">#panel4</div>
+					<div class="panel-body">content</div>
+				</div>
+
+			</div>
+			<div class="col-xs-3">
+				<div id="panel5" style="display:none" class="panel panel-primary">
+					<div class="panel-heading">#panel5</div>
+					<div class="panel-body">content</div>
+				</div>
+
+			</div>
+		</div>
+		
+		<style>
+			.special {
+				color : blue;
+			}
+		</style>
+		
+		<ul class="list">
+			<li>one</li>
+			<li class="special">two</li>
+			<li>three</li>
+			<li>
+			<ui class="sublist"> 
+				<li>1</li>
+				<li>2</li>
+				<li>3</li>
+			</ui>
+			</li>
+		
+		</ul>
+	</div>
+
+	<script type="text/javascript">
+		$(function() {
+		    var content = "My Awesome content";
+			$('.panel-button').on('click', function() {
+				var panelId = $(this).attr('data-panelId');
+				//alert(panelId);
+				$("#"+panelId).toggle();
+				$("#"+panelId+" .panel-body").html(content);
+			});
+			
+			/* $('li').on('click', function() {
+				$(this).removeClass('special');
+				$(this).siblings().addClass('special');
+				//$(this).closest('.link').addClass('special');				
+			}); */
+			/* $('.list').on('click', function() {
+				$(this).find('li').filter(':first').addClass('special');
+								
+			}); */
+			$('.list').on('click', function() {
+				/* $(this).find('li').filter('.special').remove(); */
+				$(this).find('.special').remove();
+								
+			});
+		});
+	</script>
+
+</body>
+</html>
